@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>План знаомства</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="conditions.js" defer></script>
+    <script src="form1.js" defer></script>
+</head>
+<body>
+    <header class="v">
+        <h1>Друг из приюта · V23</h1>
+        <p id="status" role="status"></p>
+    </header>
+    <main class="page">
+        
+        <nav>
+            <a href="index.html">На главную</a>
+            <a href="index1.html">Каталог</a>
+        </nav>
+        <h1>План знакомства</h1>
+        <form class="request-form" method="get" novalidate>
+            <p class="form-field">
+                <label for="item">Наши друзья</label>
+                <select id="item" name="item" required>
+                    <option value="">Выберите из списка</option>
+                    <option value="fridge">Луна</option>
+                    <option value="washer">Барсик</option>
+                    <option value="kettle">Карлик</option>
+                </select>
+            </p>
+            <p class="form-field">
+                <label for="number-of-people">Количество посетителей</label>
+                <br />
+                <input type="number" id="quantity" name="number-of-people" min="1" max="6" step="1" value="1" required>
+            </p>
+            <p class="form-field">
+                <label for="a">Пожелания к встрече</label>
+                <br />
+                <textarea id="a" name="a" rows="5" placeholder="Опишите ваши пожелания"></textarea>
+            </p>
+
+            <p class="form-field">
+                <label for="c">Длительность встречи</label>
+                <br>
+                <input type="range" id="c" name="duration" min="1" max="5" value="3" step="1">
+                <div class="range-bottom-labels">
+                    <span>Короткая</span>
+                    <span>Долгая</span>
+                </div>
+            </p>
+            <fieldset>
+                <p>
+                    <input id="extra1" name="extra1" type="checkbox" value="yes" checked>
+                    <label for="extra1">Прогулка с волонтёром</label>
+                </p>
+                <p>
+                    <input id="extra2" name="extra1" type="checkbox" value="yes">
+                    <label for="extra2">Принести игрушку</label>
+                </p>
+            </fieldset>
+            <button id="show-names" type="submit">Проверить форму</button>
+            <p id="result" role="status" aria-live="polite"></p>
+        </form>
+        <div class="a1">
+            <a href="index.html">Назад</a>
+        </div>
+        <footer>
+            <p>Учебный прототип · Вариант 23</p>
+        </footer>
+        
+
+        <script>
+            const slider = document.getElementById('c');
+            function updateFill() {
+            const percent = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+            slider.style.background = `linear-gradient(to right, #8B4513 ${percent}%, #cddbe6 ${percent}%)`;
+            }
+            slider.addEventListener('input', updateFill);
+            updateFill();
+        </script>
+    </main>
+</body>
