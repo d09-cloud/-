@@ -10,14 +10,14 @@ const FILES = [
   "./index1.html",
   "./index2.html",
   "./style.css",
-  "./manifest.webmanifest"
-  "./catalog.js"
-  "./catalog-page.js"
-  "./conditions.js"
-  "./form1.js"
-  "./images/icon192.png"
-  "./images/icon512.png"
-  "./images/ed.png"
+  "./manifest.webmanifest",
+  "./catalog.js",
+  "./catalog-page.js",
+  "./conditions.js",
+  "./form1.js",
+  "./images/icon192.png",
+  "./images/icon512.png",
+  "./images/ed.png",
   "./images/item.png"
 ];
 
