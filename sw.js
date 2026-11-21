@@ -18,7 +18,7 @@ const FILES = [
   "./images/icon192.png",
   "./images/icon512.png",
   "./images/ed.png",
-  "./images/item.png"
+  "./images/item2.png"
 ];
 
 self.addEventListener("install", (event) => {
