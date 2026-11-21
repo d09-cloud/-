@@ -17,7 +17,7 @@
         <p id="status" role="status"></p>
     </header>
     <main class="page">
-        
+
         <nav>
             <a href="index.html">На главную</a>
             <a href="index1.html">Каталог</a>
@@ -72,7 +72,7 @@
         <footer>
             <p>Учебный прототип · Вариант 23</p>
         </footer>
-        
+
 
         <script>
             const slider = document.getElementById('c');
@@ -84,4 +84,11 @@
             updateFill();
         </script>
     </main>
+    <script>
+        if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js").catch((error) => {
+        console.error("Не удалось зарегистрировать service worker:", error);
+        });
+        }
+    </script>
 </body>

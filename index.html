@@ -13,7 +13,8 @@
 
 <body>
     <header class="v">
-        <h1>Сайт для приюта · V23</h1> 
+        <h1>Сайт для приюта · V23</h1>
+        <p>Учебная версия 1</p>
         <p id="status" role="status"></p>
     </header>
     <main class="page">
@@ -38,5 +39,12 @@
             <p>Учебный прототип · Вариант 23</p>
         </footer>
     </main>
+    <script>
+        if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js").catch((error) => {
+        console.error("Не удалось зарегистрировать service worker:", error);
+        });
+        }
+    </script>
 </body>
 </html>
